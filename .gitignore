@@ -1,0 +1,23 @@
+# Visual Studio build output
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+Win32/
+*.dll
+*.asi
+*.exp
+*.lib
+*.pdb
+*.ilk
+*.obj
+*.log
+
+# VS project cruft
+.vs/
+*.user
+*.suo
+*.vcxproj.user
+
+# Keep the runtime config out of the repo (it's per-install)
+silus_mod_loader.ini

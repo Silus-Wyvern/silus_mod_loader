@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="silus_mod_loader.vcxproj" Id="44c7adf5-ca5d-4b2f-bde1-1d8534c7ecb8" />
+</Solution>

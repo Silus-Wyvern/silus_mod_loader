@@ -1,0 +1,16 @@
+; silus_mod_loader.def
+;
+; Alternative to the /EXPORT linker pragma in silus_mod_loader.cpp.
+; Exports the loader entry point under its UNDECORATED name "load".
+;
+; void __stdcall load(void) decorates to _load@0 under MSVC. patch.dll's ASI
+; loader resolves the export by the plain name "load" (GetProcAddress style),
+; so the export must be undecorated.
+;
+; To use this instead of the pragma: add it under
+;   Linker > Input > Module Definition File
+; and remove the #pragma comment(linker, "/EXPORT:load=_load@0") line.
+
+LIBRARY silus_mod_loader
+EXPORTS
+    load
