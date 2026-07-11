@@ -1,7 +1,7 @@
-# Silus PSO — Mod / Skin Loader
+# Mod / Skin Loader
 
 A lightweight ASI plugin for PSOBB (annz1 / mteth client) that lets players load
-replacement asset files (skins, textures, models, sounds, quests, etc.) from a
+replacement asset files (skins, textures, models, sounds, etc.) from a
 `mods` folder **without modifying the game's real data directory**.
 
 Install a mod = drop a folder in. Remove a mod = delete the folder. The original
@@ -89,12 +89,19 @@ Create `silus_mod_loader.ini` next to the `.asi`:
 
 ```ini
 [settings]
-mods_dir=mods         ; folder (relative to the game dir) to scan for mods
-log=1                 ; 1 = write silus_mod_loader.log, 0 = off
-log_redirects=0       ; 1 = log every single redirected file (verbose/debug)
+; folder (relative to the game dir) to scan for mods
+mods_dir=mods
+; 1 = write silus_mod_loader.log, 0 = off
+log=1
+; 1 = log every single redirected file (verbose/debug)
+log_redirects=0
 ```
 
 All keys are optional; the defaults above are used if the file is absent.
+
+Comments go on their own line, starting with `;`. Inline comments after a value
+(e.g. `mods_dir=mods   ; note`) are also tolerated, but keeping comments on
+their own line is the safest habit.
 
 ---
 
